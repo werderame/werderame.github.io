@@ -17,6 +17,7 @@ Designed a Python-based ETL pipeline to predict and avoid waste using FEFO logic
 <details>
   
 <summary>More details on this project</summary>
+<div markdown=1>
 &nbsp;   
    
 &nbsp;&nbsp;&nbsp;_Objective._ Developed a Python-based First Expired, First Out (FEFO) model that uses an ETL pipeline to publish waste projections, providing transparency and improving decision-making in menu planning, supply planning, and purchasing.       
@@ -29,6 +30,7 @@ Designed a Python-based ETL pipeline to predict and avoid waste using FEFO logic
 
 &nbsp;&nbsp;&nbsp;_Results._ Efficiency: Enabled accurate and timely decisions to reduce waste. Scalability: The FEFO model is adaptable across various markets and product categories. Impact: Led to more informed menu planning, helping align purchasing volumes with real-time expiration risks; cost savings: 17.000€/w.   
 &nbsp;&nbsp;&nbsp;
+</div>
 </details>
 
 Open the GitHub [repository](https://pages.github.com/).
