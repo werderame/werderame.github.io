@@ -14,6 +14,8 @@ Analytic tools to support decision-making in manufacturing Supply Chain: KPIs an
 #### FEFO Waste Projection Model: Optimizing Shelf Life Management (@ HelloFresh)
 Designed a Python-based ETL pipeline to predict and avoid waste using FEFO logic and reducing waste by €35,000/month. Integrated data from the Databricks DWH and Google Drive API, providing real-time insights through Tableau dashboards.   
 
+&nbsp;&nbsp;&nbsp;_Objective._ Developed a Python-bTEST
+
 <dl><dd><details>
   
 <summary>More details on this project</summary>
