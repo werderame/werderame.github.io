@@ -2,8 +2,6 @@ title: Filippo Carraro
 logo: /assets/img/filippo-profile-picture-small.png
 
 description: Data Analyst
-# show_downloads: true
-theme: jekyll-theme-minimal
 ### Skills
 - SQL
 - Python
@@ -12,3 +10,6 @@ theme: jekyll-theme-minimal
 - Team leadership
 - Supplier management
 - Project management
+# show_downloads: true
+theme: jekyll-theme-minimal
+
