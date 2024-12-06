@@ -1,30 +1,6 @@
-# Data Analyst
+# Data Analyst   
 
-### Education
-SQL table transformation (course), Introduction to Databases (course), Operations
-management (course), Production Planning (certification), Introduction to Data Science
-Specialization (certification).
-
-### Latest Work Experience
-#### Sr. Process Manager, Data Analytics @ HelloFresh 
-Analytic tools to support decision-making in manufacturing Supply Chain: KPIs and Dashboards, FEFO Model to predict Waste, ad hoc business applications and pipelines.
-
-<table class="gm-element-pad" style="background-color: rgb(255, 255, 255);" border="0" cellpadding="0" cellspacing="0" width="100%">
-	<tbody>
-		<tr height="2px">
-			<td style="background-color:#0f2276; width:12,5%"></td>
-			<td style="background-color:#1a958b; width:12,5%"></td>
-			<td style="background-color:#1b910a; width:12,5%"></td>
-			<td style="background-color:#fa5208; width:12,5%"></td>
-			<td style="background-color:#fa0814; width:12,5%"></td>
-			<td style="background-color:#9307de; width:12,5%"></td>
-			<td style="background-color:#23910a; width:12,5%"></td>
-			<td style="background-color:#2b1cf2; width:12,5%"></td>
-		</tr>
-	</tbody>
-</table>
-
-<div style="display: flex; width: 100%; height: 2px;">
+<div style="display: flex; width: 100%; height: 1px;">
         <div style="flex: 1; background-color: #0f2276;"></div>
         <div style="flex: 1; background-color: #1a958b;"></div>
         <div style="flex: 1; background-color: #1b910a;"></div>
@@ -33,7 +9,31 @@ Analytic tools to support decision-making in manufacturing Supply Chain: KPIs an
         <div style="flex: 1; background-color: #9307de;"></div>
 	<div style="flex: 1; background-color: #23910a;"></div>
 	<div style="flex: 1; background-color: #2b1cf2;"></div>
-</div>
+</div>   
+
+## Resume   
+
+### Education
+SQL table transformation (course), Introduction to Databases (course), Operations
+management (course), Production Planning (certification), Introduction to Data Science
+Specialization (certification).
+
+### Work Experience
+#### Sr. Process Manager, Data Analytics @ HelloFresh 
+Analytic tools to support decision-making in manufacturing Supply Chain: KPIs and Dashboards, FEFO Model to predict Waste, ad hoc business applications and pipelines.   
+
+<div style="display: flex; width: 100%; height: 1px;">
+        <div style="flex: 1; background-color: #0f2276;"></div>
+        <div style="flex: 1; background-color: #1a958b;"></div>
+        <div style="flex: 1; background-color: #1b910a;"></div>
+        <div style="flex: 1; background-color: #fa5208;"></div>
+        <div style="flex: 1; background-color: #fa0814;"></div>
+        <div style="flex: 1; background-color: #9307de;"></div>
+	<div style="flex: 1; background-color: #23910a;"></div>
+	<div style="flex: 1; background-color: #2b1cf2;"></div>
+</div>   
+
+## Portfolio
 
 ### Selected Projects
 #### FEFO Waste Projection Model: Optimizing Shelf Life Management (@ HelloFresh)
@@ -73,5 +73,15 @@ Open the GitHub <a href="https://github.com/werderame/werderame.github.io/tree/m
 
 
 #### Packaging Licensing Fee Calculator (@ HelloFresh)
-Automated fee calculations via a dynamic pipeline linked to Google Sheets and DWH. Saved fee costs by €120,000/month by improving data accuracy. 
+Automated fee calculations via a dynamic pipeline linked to Google Sheets and DWH. Saved fee costs by €120,000/month by improving data accuracy.   
 
+<div style="display: flex; width: 100%; height: 3px;">
+        <div style="flex: 1; background-color: #0f2276;"></div>
+        <div style="flex: 1; background-color: #1a958b;"></div>
+        <div style="flex: 1; background-color: #1b910a;"></div>
+        <div style="flex: 1; background-color: #fa5208;"></div>
+        <div style="flex: 1; background-color: #fa0814;"></div>
+        <div style="flex: 1; background-color: #9307de;"></div>
+	<div style="flex: 1; background-color: #23910a;"></div>
+	<div style="flex: 1; background-color: #2b1cf2;"></div>
+</div>   
