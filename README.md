@@ -12,7 +12,6 @@ Analytic tools to support decision-making in manufacturing Supply Chain: KPIs an
 
 ### Selected Projects
 #### FEFO Waste Projection Model: Optimizing Shelf Life Management (@ HelloFresh)
-Designed a Python-based ETL pipeline to predict and avoid waste using FEFO logic and reducing waste by €35,000/month. Integrated data from the Databricks DWH and Google Drive API, providing real-time insights through Tableau dashboards.   
 
 <details>
   
@@ -48,7 +47,7 @@ Designed a Python-based ETL pipeline to predict and avoid waste using FEFO logic
 </div>
 </details>
 
-Open the GitHub [repository]([https://github.com/werderame/werderame.github.io/tree/cd7ed8dcf0651003e6775567e538b85759be22cb/portfolio-projects/fefo_waste_projection]).   
+Open the GitHub [repository](https://github.com/werderame/werderame.github.io/tree/6bccfc537ed69cf3420f17e6423f85808b96d7a5/portfolio-projects/fefo_waste_projection).   
 
 #### Packaging Licensing Fee Calculator (@ HelloFresh)
 Automated fee calculations via a dynamic pipeline linked to Google Sheets and DWH. Saved fee costs by €120,000/month by improving data accuracy. 
