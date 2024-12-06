@@ -23,3 +23,10 @@ https://docs.google.com/viewer?url=https://werderame.github.io/assets/img/readme
 # 6
 <embed src="https://werderame.github.io/assets/img/readme_file_fefo_github.pdf" width="500" height="375" 
  type="application/pdf">
+
+# 7
+
+
+<object src="https://docs.google.com/viewer?url=https://werderame.github.io/assets/img/readme_file_fefo_github.pdf" type="application/pdf" title="SamplePdf" width="500" height="720">
+    <a href="https://docs.google.com/viewer?url=https://werderame.github.io/assets/img/readme_file_fefo_github.pdf">shree</a> 
+</object>
