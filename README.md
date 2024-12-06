@@ -9,6 +9,20 @@ Specialization (certification).
 #### Sr. Process Manager, Data Analytics @ HelloFresh 
 Analytic tools to support decision-making in manufacturing Supply Chain: KPIs and Dashboards, FEFO Model to predict Waste, ad hoc business applications and pipelines.
 
+<table class="gm-element-pad" style="background-color: rgb(255, 255, 255);" border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tbody>
+		<tr height="2px">
+			<td style="background-color:#0f2276; width:12,5%"></td>
+			<td style="background-color:#1a958b; width:12,5%"></td>
+			<td style="background-color:#1b910a; width:12,5%"></td>
+			<td style="background-color:#fa5208; width:12,5%"></td>
+			<td style="background-color:#fa0814; width:12,5%"></td>
+			<td style="background-color:#9307de; width:12,5%"></td>
+			<td style="background-color:#23910a; width:12,5%"></td>
+			<td style="background-color:#2b1cf2; width:12,5%"></td>
+		</tr>
+	</tbody>
+</table>
 
 ### Selected Projects
 #### FEFO Waste Projection Model: Optimizing Shelf Life Management (@ HelloFresh)
