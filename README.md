@@ -24,7 +24,7 @@ Analytic tools to support decision-making in manufacturing Supply Chain: KPIs an
 	</tbody>
 </table>
 
-<div markdown=1 style="display: flex; width: 100%; height: 2px;">
+<div style="display: flex; width: 100%; height: 2px;">
         <div style="flex: 1; background-color: #0f2276;"></div>
         <div style="flex: 1; background-color: #1a958b;"></div>
         <div style="flex: 1; background-color: #1b910a;"></div>
