@@ -31,6 +31,18 @@ Designed a Python-based ETL pipeline to predict and avoid waste using FEFO logic
 &nbsp;&nbsp;&nbsp;_Results._ Efficiency: Enabled accurate and timely decisions to reduce waste. Scalability: The FEFO model is adaptable across various markets and product categories. Impact: Led to more informed menu planning, helping align purchasing volumes with real-time expiration risks; cost savings: 17.000€/w.   
 &nbsp;&nbsp;&nbsp;
 </div>
+</details>   
+
+<details>
+  
+<summary>More details on this project</summary>
+<div markdown=1>
+<object data="https://werderame.github.io/assets/img/readme_file_fefo_github.pdf" type="application/pdf" width="700px" height="700px">
+    <embed src="https://werderame.github.io/assets/img/readme_file_fefo_github.pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://werderame.github.io/assets/img/readme_file_fefo_github.pdf">Download PDF</a>.</p>
+    </embed>
+</object>
+</div>
 </details>
 
 Open the GitHub [repository](https://pages.github.com/).
