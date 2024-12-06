@@ -12,9 +12,7 @@ Analytic tools to support decision-making in manufacturing Supply Chain: KPIs an
 
 ### Selected Projects
 #### FEFO Waste Projection Model: Optimizing Shelf Life Management (@ HelloFresh)
-
 <details>
-  
 <summary>Quick overview</summary>
 <div markdown=1>
 &nbsp;   
@@ -46,8 +44,8 @@ Analytic tools to support decision-making in manufacturing Supply Chain: KPIs an
 </object>
 </div>
 </details>
+Open the GitHub <a href="https://github.com/werderame/werderame.github.io/tree/main/portfolio-projects/fefo_waste_projection" target="_blank" rel="noopener noreferrer">repository</a>.
 
-Open the GitHub [repository](https://github.com/werderame/werderame.github.io/tree/6bccfc537ed69cf3420f17e6423f85808b96d7a5/portfolio-projects/fefo_waste_projection).   
 
 #### Packaging Licensing Fee Calculator (@ HelloFresh)
 Automated fee calculations via a dynamic pipeline linked to Google Sheets and DWH. Saved fee costs by €120,000/month by improving data accuracy. 
