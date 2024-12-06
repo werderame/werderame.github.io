@@ -16,7 +16,7 @@ Designed a Python-based ETL pipeline to predict and avoid waste using FEFO logic
 
 <details>
   
-<summary>More details on this project</summary>
+<summary>Quick overview</summary>
 <div markdown=1>
 &nbsp;   
    
@@ -37,7 +37,7 @@ Designed a Python-based ETL pipeline to predict and avoid waste using FEFO logic
   
 <summary>More details on this project</summary>
 <div markdown=1>
-<object data="https://werderame.github.io/assets/img/readme_file_fefo_github.pdf" type="application/pdf" width="700px" height="700px">
+<object data="https://werderame.github.io/assets/img/readme_file_fefo_github.pdf" type="application/pdf" width="75%">
     <embed src="https://werderame.github.io/assets/img/readme_file_fefo_github.pdf">
         <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://werderame.github.io/assets/img/readme_file_fefo_github.pdf">Download PDF</a>.</p>
     </embed>
@@ -45,7 +45,7 @@ Designed a Python-based ETL pipeline to predict and avoid waste using FEFO logic
 </div>
 </details>
 
-Open the GitHub [repository](https://pages.github.com/).
+Open the GitHub [repository](https://pages.github.com/portfolio-projects/fefo_waste_projection).
 
 #### Packaging Licensing Fee Calculator (@ HelloFresh)
 Automated fee calculations via a dynamic pipeline linked to Google Sheets and DWH. Saved fee costs by €120,000/month by improving data accuracy. 
