@@ -24,6 +24,17 @@ Analytic tools to support decision-making in manufacturing Supply Chain: KPIs an
 	</tbody>
 </table>
 
+<div markdown=1 style="display: flex; width: 100%; height: 2px;">
+        <div style="flex: 1; background-color: #0f2276;"></div>
+        <div style="flex: 1; background-color: #1a958b;"></div>
+        <div style="flex: 1; background-color: #1b910a;"></div>
+        <div style="flex: 1; background-color: #fa5208;"></div>
+        <div style="flex: 1; background-color: #fa0814;"></div>
+        <div style="flex: 1; background-color: #9307de;"></div>
+	<div style="flex: 1; background-color: #23910a;"></div>
+	<div style="flex: 1; background-color: #2b1cf2;"></div>
+</div>
+
 ### Selected Projects
 #### FEFO Waste Projection Model: Optimizing Shelf Life Management (@ HelloFresh)
 <details>
