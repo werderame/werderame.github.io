@@ -1,5 +1,7 @@
 # Data Analyst   
 
+## Resume   
+
 <div style="display: flex; width: 100%; height: 1px;">
         <div style="flex: 1; background-color: #0f2276;"></div>
         <div style="flex: 1; background-color: #1a958b;"></div>
@@ -9,9 +11,7 @@
         <div style="flex: 1; background-color: #9307de;"></div>
 	<div style="flex: 1; background-color: #23910a;"></div>
 	<div style="flex: 1; background-color: #2b1cf2;"></div>
-</div>   
-
-## Resume   
+</div> 
 
 ### Education
 SQL table transformation (course), Introduction to Databases (course), Operations
@@ -22,6 +22,8 @@ Specialization (certification).
 #### Sr. Process Manager, Data Analytics @ HelloFresh 
 Analytic tools to support decision-making in manufacturing Supply Chain: KPIs and Dashboards, FEFO Model to predict Waste, ad hoc business applications and pipelines.   
 
+## Portfolio
+
 <div style="display: flex; width: 100%; height: 1px;">
         <div style="flex: 1; background-color: #0f2276;"></div>
         <div style="flex: 1; background-color: #1a958b;"></div>
@@ -31,12 +33,10 @@ Analytic tools to support decision-making in manufacturing Supply Chain: KPIs an
         <div style="flex: 1; background-color: #9307de;"></div>
 	<div style="flex: 1; background-color: #23910a;"></div>
 	<div style="flex: 1; background-color: #2b1cf2;"></div>
-</div>   
-
-## Portfolio
+</div>  
 
 ### Selected Projects
-#### FEFO Waste Projection Model: Optimizing Shelf Life Management (@ HelloFresh)
+#### FEFO Waste Projection Model (@ HelloFresh)
 <details>
 <summary>Quick overview</summary>
 <div markdown=1>
@@ -73,7 +73,39 @@ Open the GitHub <a href="https://github.com/werderame/werderame.github.io/tree/m
 
 
 #### Packaging Licensing Fee Calculator (@ HelloFresh)
-Automated fee calculations via a dynamic pipeline linked to Google Sheets and DWH. Saved fee costs by €120,000/month by improving data accuracy.   
+<details>
+<summary>Quick overview</summary>
+<div markdown=1>
+&nbsp;   
+   
+&nbsp;&nbsp;&nbsp;_Objective._ Automate a pipeline dynamically integrated with Google Sheets that pushes to the DWH calculated costs related to utilized packaging.       
+
+&nbsp;&nbsp;&nbsp;_Key Problem._ HelloFresh is required to report and pay fees related to the disposal and recycling of packaging materials delivered to customers. This includes packaging such as plastics, paper, and metals. Tracking these materials and calculating the corresponding fees used to be a time-consuming, manual process.  
+
+&nbsp;&nbsp;&nbsp;_Solution Overview._ This tool aggregates data from multiple sources to automatically calculate licensing fees based on the weight of packaging materials delivered each month. Data Sources: Fetched consumption data from paying customers’ deliveries and donated/disposed inventory movements. Packaging Weight and Fee Data: Extracts dynamically from a Google Sheets file.   
+
+&nbsp;&nbsp;&nbsp;_Results._ The raw data is published to the DWH. A visual report is provided in Tableau.   
+
+&nbsp;&nbsp;&nbsp;_Impact._ Estimated 10 man-hours saved per month. Cost savings of approximately €120,000 per month. (These savings are due to the choice of sources in the manual reporting, that relied on highly inaccurate inventory transactions, rather than using more downstream tables.)   
+&nbsp;&nbsp;&nbsp;
+</div>
+</details>   
+
+<details>
+  
+<summary>More details on this project</summary>
+<div markdown=1>
+<p><a href="https://werderame.github.io/assets/img/readme_file_packaging_fee_github.pdf">Download PDF</a>.</p>   
+
+  
+  <object data="https://werderame.github.io/assets/img/readme_file_packaging_fee_github.pdf" type="application/pdf" width="100%" height="400">
+    <embed src="https://werderame.github.io/assets/img/readme_file_packaging_fee_github.pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://werderame.github.io/assets/img/readme_file_packaging_fee_github.pdf">Download PDF</a>.</p>
+    </embed>
+</object>
+</div>
+</details>
+Open the GitHub <a href="https://github.com/werderame/werderame.github.io/tree/main/portfolio-projects/packaging_licencing_fee" target="_blank" rel="noopener noreferrer">repository</a>. 
 
 <div style="display: flex; width: 100%; height: 3px;">
         <div style="flex: 1; background-color: #0f2276;"></div>
