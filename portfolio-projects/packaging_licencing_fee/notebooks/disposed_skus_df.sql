@@ -21,7 +21,6 @@ inventory AS (
         , CASE
             WHEN st.sla_reason_id = 'DON' THEN 'donation'
             WHEN st.sla_reason_id = 'DIS' THEN 'disposal'
-            WHEN st.sla_reason_id = 'RES' THEN 'resale' --we dont have transactions yet, but might have in the future. Let's include it - Duncan
         END as destination
         , LEFT(ST.prod_code, 3) as sku_category
         , cal.date_string_backwards as delivery_date
@@ -32,7 +31,7 @@ inventory AS (
     WHERE ST.oel_class = "OEL_STOCK_DELETE" --"OEL_STOCK_QTY_CHANGE" is included by global query as well but adds only 41 rows as of now and with a lot of data quality issues (e.g. negative quantities from_value-to_value)
         AND ST.dc IN ('FI','PI')
         AND st.qty<10000000 --exclude extreme wrong casesS
-        AND UPPER(ST.sla_reason_id) IN ('DIS','DON','RES')
+        AND UPPER(ST.sla_reason_id) IN ('DIS','DON')
         AND TO_DATE(FROM_UNIXTIME(CAST(FLOOR(ST.event_time/1000) AS INT))) >= TO_DATE('2023-12-30')
         AND LEFT(ST.prod_code,3) NOT IN ('C_20', 'C_21', 'C_22') --- exclude categories that are not relevant to material waste
     GROUP BY 1,2,3,4,5,6,7
