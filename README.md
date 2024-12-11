@@ -2,32 +2,28 @@
 
 ## Resume
 <div style="display: flex; width: 100%; height: 1px;"><div style="flex: 1; background-color: #0f2276;"></div><div style="flex: 1; background-color: #1a958b;"></div><div style="flex: 1; background-color: #1b910a;"></div><div style="flex: 1; background-color: #fa5208;"></div><div style="flex: 1; background-color: #fa0814;"></div><div style="flex: 1; background-color: #9307de;"></div><div style="flex: 1; background-color: #23910a;"></div><div style="flex: 1; background-color: #2b1cf2;"></div></div>
-</br>
+
 ### Education
 SQL table transformation (course), Introduction to Databases (course), Operations
 management (course), Production Planning (certification), Introduction to Data Science
 Specialization (certification).
 
 ### Work Experience
-#### Sr. Process Manager - Data Analytics @HelloFresh   
-Aug 2023 - Present   
+#### Sr. Process Manager - Data Analytics @HelloFresh  
 Analytic tools to support decision-making in manufacturing Supply Chain: KPIs and Dashboards, FEFO Model to predict Waste, ad hoc business applications and pipelines.   
 
-#### Sr. Logistics Manager - Supply Chain Analytics @Stryze   
-Feb 2022 - Jul 2023   
+#### Sr. Logistics Manager - Supply Chain Analytics @Stryze 
 Owner of EU inventory management and practice standardization: 3PL warehouses KPIs and Sales Ops BI dashboards.   
 
-#### Logistics Manager @INFARM   
-Sep 2019 - Feb 2022   
+#### Logistics Manager @INFARM  
 Owner of Infarm’s Europe’s Logistics: Warehousing, Order Fulfillment, Mid and Last Mile distribution.   
 
-#### Head of Supply Chain Planning @Antal
-Jun 2012 - Aug 2019   
+#### Head of Supply Chain Planning @Antal  
 Owner of Antal’s Procurement and Production Ops. Leader for the company’s implementation of a new ERP system 
 
 ## Portfolio
 <div style="display: flex; width: 100%; height: 1px;"><div style="flex: 1; background-color: #0f2276;"></div><div style="flex: 1; background-color: #1a958b;"></div><div style="flex: 1; background-color: #1b910a;"></div><div style="flex: 1; background-color: #fa5208;"></div><div style="flex: 1; background-color: #fa0814;"></div><div style="flex: 1; background-color: #9307de;"></div><div style="flex: 1; background-color: #23910a;"></div><div style="flex: 1; background-color: #2b1cf2;"></div></div>
-</br>
+
 ### Selected Projects
 #### FEFO Waste Projection Model (@ HelloFresh)
 <details>
@@ -99,7 +95,5 @@ Open the GitHub <a href="https://github.com/werderame/werderame.github.io/tree/m
 </div>
 </details>
 Open the GitHub <a href="https://github.com/werderame/werderame.github.io/tree/main/portfolio-projects/packaging_licencing_fee" target="_blank" rel="noopener noreferrer">repository</a>. 
-</br>  
-</br>  
-</br>  
+
 <div style="display: flex; width: 100%; height: 2px;"><div style="flex: 1; background-color: #0f2276;"></div><div style="flex: 1; background-color: #1a958b;"></div><div style="flex: 1; background-color: #1b910a;"></div><div style="flex: 1; background-color: #fa5208;"></div><div style="flex: 1; background-color: #fa0814;"></div><div style="flex: 1; background-color: #9307de;"></div><div style="flex: 1; background-color: #23910a;"></div><div style="flex: 1; background-color: #2b1cf2;"></div></div>
