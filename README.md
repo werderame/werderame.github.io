@@ -29,11 +29,13 @@ Or read on to see some of my recent works ..
 [![GitHub Repository](https://img.shields.io/badge/-Repo-181717?style=flat&logo=github&logoColor=white)](https://github.com/werderame/werderame.github.io/tree/main/portfolio-projects/fefo_waste_projection)    
 
 #### 📦 Packaging Licencing Fee Calculator (@ HelloFresh)
-Automated a dynamic pipeline integrated with Google Sheets and the DWH to calculate packaging disposal and recycling fees. The tool aggregates data from multiple sources, automates calculations, and outputs results to Tableau, saving ~10 man-hours/month and €120,000/month through improved accuracy.  
+&nbsp;&nbsp;&nbsp;Automated a dynamic pipeline integrated with Google Sheets and the DWH to calculate packaging disposal and recycling fees. The tool aggregates data from multiple sources, automates calculations, and outputs results to Tableau, saving ~10 man-hours/month and €120,000/month through improved accuracy.  
     
 &nbsp;&nbsp;&nbsp;Lots more nerdy information over here..&nbsp;&nbsp;&nbsp;[![Download PDF](https://img.shields.io/badge/-pdf-FF0000?style=flat&logo=adobeacrobatreader&logoColor=white)](https://werderame.github.io/assets/img/readme_file_packaging_fee_github.pdf)
 [![GitHub Repository](https://img.shields.io/badge/-Repo-181717?style=flat&logo=github&logoColor=white)](https://github.com/werderame/werderame.github.io/tree/main/portfolio-projects/packaging_licencing_fee)
-
+    
+#### 🏷️💰 Personal Fianances
+&nbsp;&nbsp;&nbsp;Track your expenses with this tool designed to automate the categorization of bank transactions. Inspired by Jer Bouma's repository, it combines advanced text processing and Levenshtein-based methods for accurate, flexible, and easy-to-review financial categorization. Feel free to use it or get in touch if you have more ideas! [![GitHub Repository](https://img.shields.io/badge/-Repo-181717?style=flat&logo=github&logoColor=white)](https://github.com/werderame/werderame.github.io/tree/main/portfolio-projects/personal_finances)    
 
 
 <div style="display: flex; width: 100%; height: 2px;"><div style="flex: 1; background-color: #0f2276;"></div><div style="flex: 1; background-color: #1a958b;"></div><div style="flex: 1; background-color: #1b910a;"></div><div style="flex: 1; background-color: #fa5208;"></div><div style="flex: 1; background-color: #fa0814;"></div><div style="flex: 1; background-color: #9307de;"></div><div style="flex: 1; background-color: #23910a;"></div><div style="flex: 1; background-color: #2b1cf2;"></div></div>
