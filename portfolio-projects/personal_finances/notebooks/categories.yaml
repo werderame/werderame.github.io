@@ -1,9 +1,7 @@
 categories:
   house:
-    - lyckebohouse
-    - miete
-    - suewag
-    - lyckebo
+    - miete        # Rent
+    - suewag       # Utility provider
   shopping:
     - amazon
     - apotheke
@@ -31,7 +29,6 @@ categories:
     - hellofresh
     - kaufland
     - landkorb
-    - mensamdcmitte
     - rewe
     - ubereats
     - daimi baeckerei
@@ -43,7 +40,6 @@ categories:
     - cicala.caffetteria
     - kiez.kaffee.kraft
     - uber eats
-    - 9060 grafschaft
   services:
     - apple
     - catsitter
@@ -66,7 +62,6 @@ categories:
     - cinema
     - naturkundemuseum
     - swimmingpool
-    - unobravo
     - yoopies
     - sse schwimm und sprun
     - bertablockboulder
