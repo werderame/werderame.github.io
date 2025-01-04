@@ -1,0 +1,79 @@
+categories:
+  house:
+    - lyckebohouse
+    - miete
+    - suewag
+    - lyckebo
+  shopping:
+    - amazon
+    - apotheke
+    - blume2000
+    - candashop
+    - clothesshop
+    - dm-drogerie
+    - goldhahnsampson
+    - thalia
+    - zalando
+    - paypal
+    - sparda bank
+    - zettle kiezkinder
+    - blume 2000
+  food:
+    - aldi
+    - backwerk
+    - bakery
+    - bareatpoint
+    - barkraft
+    - biocompany
+    - cicalabar
+    - feihlbakery
+    - foodexpense
+    - hellofresh
+    - kaufland
+    - landkorb
+    - mensamdcmitte
+    - rewe
+    - ubereats
+    - daimi baeckerei
+    - baecker feihl
+    - schaefers backery
+    - food beverage
+    - campus buch
+    - aldi.sagt.danke
+    - cicala.caffetteria
+    - kiez.kaffee.kraft
+    - uber eats
+    - 9060 grafschaft
+  services:
+    - apple
+    - catsitter
+    - congstar
+    - netflix
+    - openai
+    - telefonica
+    - crystian gerardo
+    - sehsterne kita
+    - chatgpt
+    - apple bill
+  transport:
+    - bvg
+    - deutschebahn
+    - shell
+    - total
+    - sellhelp
+  leisure:
+    - bertablockclimbing
+    - cinema
+    - naturkundemuseum
+    - swimmingpool
+    - unobravo
+    - yoopies
+    - sse schwimm und sprun
+    - bertablockboulder
+    - museum naturkunde
+  other:
+    - genericpayment
+    - monthlytransfer
+    - prelievo
+    - volksbank
+    - monthly transfer common account
