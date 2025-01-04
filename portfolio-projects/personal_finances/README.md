@@ -1,6 +1,6 @@
 # **Personal Finance Categorization Tool**
 
-Some enjoy, or even feel it necessary to keep track of their personal finances. Expenses are, however, many, hard to read and essentially impossible to keep track of *manually*. With the intent to automate the categorisation of transaction descriptions, this text processing study aims at making it easy to assign, store and review categories of our bank transactions. Inspired by the repository of Jer Bouma, this tool integrates multiple Levenshtein methods to achieve accuracy and flexibility.
+**A Text Processing Study**. Some enjoy, or even feel it necessary to keep track of their personal finances. Expenses are, however, many, hard to read and essentially impossible to keep track of *manually*. With the intent to automate the categorisation of transaction descriptions, this text processing study aims at making it easy to assign, store and review categories of our bank transactions. Inspired by the repository of Jer Bouma, this tool integrates multiple Levenshtein methods to achieve accuracy and flexibility.
 
 ## Foreword
 
@@ -25,17 +25,17 @@ This project focuses on the second aspect. Therefore it is advisable to use this
 ## **How It Works**
 
 1. **Data Preparation**  
-   Transaction data is imported as a CSV file containing a description column.  
+   Transaction data is imported as a CSV file containing a `description` column.  
 2. **Preprocessing**  
    Descriptions are cleaned and standardized through regular expressions, removing unnecessary details like long digit strings, excessive punctuation, and common irrelevant terms.  
 3. **Categorization**  
-   * **Primary Matching**: Uses Levenshtein process.Extract() to match transaction descriptions to predefined keywords.  
-   * **Secondary Matching**: Uses Levenshtein distance() and returns the minimum distance between each word of the description and the keywords from the YAML file.  
+   * **Primary Matching**: Uses Levenshtein `process.Extract()` to match transaction descriptions to predefined keywords.  
+   * **Secondary Matching**: Uses Levenshtein `distance()` and returns the minimum distance between each word of the description and the keywords from the YAML file.  
 4. **Categorisation Logic**  
    Applies layered conditions to match the most accurate keyword to the description:   
    * if the two matching principles agree then it uses that keyword.  
-   * else, if the secondary method has distance \== 0 then it uses that keyword  
-   * else , if the primary method has score \> 80 then it uses that keyword  
+   * else, if the secondary method has `distance == 0` then it uses that keyword  
+   * else , if the primary method has `score > 80` then it uses that keyword  
    * else it returns “unassigned”, since the confidence seems too low with the current categories data provided.  
 5. **Manual Review**  
    Transactions “unassigned” matches are flagged for manual categorization. Users can review and update the categories dynamically.
@@ -47,14 +47,20 @@ This project focuses on the second aspect. Therefore it is advisable to use this
 1. **Install Dependencies:**  
    * Clone the repository and install the required Python packages.  
 2. **Prepare Your Configuration:**  
-   * Create a categories.yaml file to define categories and associated brands. This YAML file should follow the structure:
+   * Create a `categories.yaml` file to define categories and associated brands. This YAML file should follow the structure:
 
-| categories:  house:    \- rent    \- ikea  shopping:    \- amazon    \- zalando |
-| :---- |
-
-   * Use the provided load\_categories function to load this file into a DataFrame for processing.  
+```categories:
+  house:
+    - rent
+    - ikea
+  shopping:
+    - amazon
+    - zalando
+```
+  
+   * Use the provided `load_categories` function to load this file into a DataFrame for processing.  
 3. **Run the Tool:**  
-   * Clean transaction data using the preprocess\_description function. This prepares the raw descriptions by removing noise like extra spaces, irrelevant words, and numeric patterns.  
+   * Clean transaction data using the `preprocess_description` function. This prepares the raw descriptions by removing noise like extra spaces, irrelevant words, and numeric patterns.  
    * Categorize transactions using a matching algorithm (e.g., Levenshtein distance). Matches are automatically assigned, while unmatched transactions can be flagged for manual review.  
 4. **Export Results:**  
    * Save the categorized transactions to a new CSV or other desired format for further analysis and reporting.  
@@ -66,11 +72,11 @@ This project focuses on the second aspect. Therefore it is advisable to use this
 
 ### **YAML File**
 
-All categories and their corresponding keywords are defined in categories.yaml. This file is designed for easy updates and customizations.
+All categories and their corresponding keywords are defined in `categories.yaml`. This file is designed for easy updates and customizations.
 
 ### **Preprocessing Rules**
 
-The preprocess\_description function ensures that transaction descriptions are cleaned and standardized before matching. Key transformations include:
+The `preprocess_description` function ensures that transaction descriptions are cleaned and standardized before matching. Key transformations include:
 
 * Removing 6+ digit strings (e.g., card numbers).  
 * Retaining meaningful punctuation (e.g., "amazon.de").  
