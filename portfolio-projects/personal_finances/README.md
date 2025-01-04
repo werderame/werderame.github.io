@@ -25,7 +25,7 @@ This project focuses on the second aspect. Therefore it is advisable to use this
 ## **How It Works**
 
 1. **Data Preparation**  
-   Transaction data is imported as a CSV file containing a `description` column.  
+   Transaction data is imported as a CSV file containing a `description` column. Please prepare a csv file and update the path in order to load it in your environment. 
 2. **Preprocessing**  
    Descriptions are cleaned and standardized through regular expressions, removing unnecessary details like long digit strings, excessive punctuation, and common irrelevant terms.  
 3. **Categorization**  
