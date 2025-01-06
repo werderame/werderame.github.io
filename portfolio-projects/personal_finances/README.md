@@ -1,20 +1,20 @@
 # **Personal Finance Categorization Tool**
 
-**A Text Processing Study**. Some enjoy, or even feel it necessary to keep track of their personal finances. Expenses are, however, many, hard to read and essentially impossible to keep track of *manually*. With the intent to automate the categorisation of transaction descriptions, this text processing study aims at making it easy to assign, store and review categories of our bank transactions. Inspired by the repository of Jer Bouma, this tool integrates multiple Levenshtein methods to achieve accuracy and flexibility.
+**A Text Processing Study**. Some enjoy, or even feel it necessary to keep track of their personal finances. Expenses are, however, many, hard to read and essentially impossible to keep track of *manually*. With the intent to automate the categorisation of transaction descriptions, this text processing study aims at making it easy to assign, store and review categories of our bank transactions. Inspired by the [repository of Jer Bouma](https://github.com/JerBouma/PersonalFinance), this tool integrates multiple Levenshtein methods to achieve accuracy and flexibility.
 
 ## Foreword
 
-How I see my own personal finances, they contain roughly two groups of transactions: capital and running expenses. Both could use some automation, however, it is important to distinguish between: 
+How I see my own personal finances, they contain roughly two groups of transactions: **capital** and **running expenses**. Both could use some automation, however, it is important to distinguish between: 
 
 * Telling apart the two groups: running expenses and invested capital   
 * Categorising of the running expenses
 
-This project focuses on the second aspect. Therefore it is advisable to use this tool on the running expenses, and having cleaned one’s transactions of those lines that correspond to pension schemes, investments, real estate property, etc. The purpose of this tool, in other words, it to tell us how much we are spending per category during a window of time.
+This project focuses on the second group. Therefore it is advisable to use this tool on the running expenses, and having cleaned one’s transactions of those lines that correspond to pension schemes, investments, real estate property, etc. The purpose of this tool, in other words, it to tell us how much we are spending per category during a window of time, rather than computing our personal financial overview.
 
 ## **Features**
 
 * **Personalised Categorization**: Assigns categories to transactions based on descriptions using a dynamic and configurable YAML file.  
-* **Text Preprocessing**: Cleans and standardizes transaction descriptions to improve match accuracy.  
+* **thefuzz Text Preprocessing**: Cleans and standardizes transaction descriptions to improve match accuracy.  
 * **Levenshtein Distance Matching**: Calculates the similarity between transaction descriptions and category keywords for more intelligent mapping.  
 * **Categorisation Logic**. Applies conditions to propose the best category match to each description.  
 * **Manual Review and Update**: Offers flexibility for manual review and fine-tuning of categories, ensuring accuracy.
@@ -87,7 +87,6 @@ The `preprocess_description` function ensures that transaction descriptions are 
 
 ## **Future Enhancements**
 
-* **Machine Learning Integration**: Build a machine learning model to suggest categories for ambiguous or uncategorized transactions.  
 * **Visualization**: Add data visualization tools for analyzing spending patterns.  
 * **Multi-Criteria Matching**: Incorporate additional heuristics for more robust categorization.  
 * **Web-Based Interface**: Develop a user-friendly dashboard for manual review and updates.
