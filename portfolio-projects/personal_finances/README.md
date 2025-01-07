@@ -54,10 +54,19 @@ This project focuses on the second group. Therefore it is advisable to use this 
     - rent
     - ikea
   shopping:
-    - amazon
+    - amazon: [amazon.com, amz bill]
     - zalando
 ```
-  
+   * Notice that the `categories` dictionary contains 2 or 3 levels, allowing to be more generic or more specific (depending on the confidence in matching a string). The parsing of categories in this script will return the 2nd level if there is no further specific string, or the string in case there is one, like so:
+```
+category   brand       keyword
+house      rent        rent
+house      ikea        ikea
+shopping   amazon      amazon.com       # "amazon.com" matches "amazon.com" in a description with higher confidence than "amazon"
+shopping   amazon      amz bill         # "amz bill" will likely be required to match the same description, while "amazon" won't return enough confidence
+shopping   zalando     zalando
+
+```
    * Use the provided `load_categories` function to load this file into a DataFrame for processing.  
 3. **Run the Tool:**  
    * Clean transaction data using the `preprocess_description` function. This prepares the raw descriptions by removing noise like extra spaces, irrelevant words, and numeric patterns.  
@@ -73,6 +82,17 @@ This project focuses on the second group. Therefore it is advisable to use this 
 ### **YAML File**
 
 All categories and their corresponding keywords are defined in `categories.yaml`. This file is designed for easy updates and customizations.
+Feel free to open it and customize it as required. Use the 3rd level lists `[amazon.com, amz bill]` in order to match with more confidence your descriptions. This is particularly useful in case your description contains private and small businesses names which no one else would recognise. E.g.
+```
+'favid friedman consultation insurance'
+```
+
+This won't ever be categorised as a `service` or other category, because words like `insurance` will likely make it look like some car related insurance. Therefore we can tackle this case like so: 
+```
+categories:
+    service:
+        - lawyer: [david friedman]
+```
 
 ### **Preprocessing Rules**
 
@@ -82,14 +102,13 @@ The `preprocess_description` function ensures that transaction descriptions are 
 * Retaining meaningful punctuation (e.g., "amazon.de").  
 * Converting text to lowercase.  
 * Stripping excessive whitespace and special characters.
+* Remove common words that would skew the precision of mathces (common locations or adjectives like 'berlin' or 'berliner', or common names like 'john' or name of relatives)
 
 ---
 
 ## **Future Enhancements**
 
 * **Visualization**: Add data visualization tools for analyzing spending patterns.  
-* **Multi-Criteria Matching**: Incorporate additional heuristics for more robust categorization.  
-* **Web-Based Interface**: Develop a user-friendly dashboard for manual review and updates.
 
 ---
 
