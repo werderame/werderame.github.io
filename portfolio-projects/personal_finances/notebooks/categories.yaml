@@ -1,74 +1,30 @@
+groups:
+    group1
+        - subgroup 1
+
 categories:
-  house:
-    - miete        # Rent
-    - suewag       # Utility provider
-  shopping:
-    - amazon: [amazon.com, amz bill]
-    - apotheke
-    - blume2000
-    - candashop
-    - clothesshop
-    - dm-drogerie
-    - goldhahnsampson
-    - thalia
-    - zalando
-    - paypal
-    - sparda bank
-    - zettle kiezkinder
-    - blume 2000
-  food:
-    - aldi
-    - backwerk
-    - bakery
-    - bareatpoint
-    - barkraft
-    - biocompany
-    - cicalabar
-    - feihlbakery
-    - foodexpense
-    - hellofresh
-    - kaufland
-    - landkorb
-    - rewe
-    - ubereats
-    - daimi baeckerei
-    - baecker feihl
-    - schaefers backery
-    - food beverage
-    - campus buch
-    - aldi.sagt.danke
-    - cicala.caffetteria
-    - kiez.kaffee.kraft
-    - uber eats
-  services:
-    - apple
-    - catsitter
-    - congstar
-    - netflix
-    - openai
-    - telefonica
-    - crystian gerardo
-    - sehsterne kita
-    - chatgpt
-    - apple bill
-  transport:
-    - bvg
-    - deutschebahn
-    - shell
-    - total
-    - sellhelp
-  leisure:
-    - bertablockclimbing
-    - cinema
-    - naturkundemuseum
-    - swimmingpool
-    - yoopies
-    - sse schwimm und sprun
-    - bertablockboulder
-    - museum naturkunde
-  other:
-    - genericpayment
-    - monthlytransfer
-    - prelievo
-    - volksbank
-    - monthly transfer common account
+# when writing categories avoid common keywords: 
+#     places:(yourCity, yourState){better 'shopberlin' than 'shop berlin', due to the score assigned to word completion}, 
+#     properNames:(yourName,yourSpouse), 
+#     names:(shop, cafe, visa), 
+#     actions(transger, withdrawal)
+# prefer keywords between "[]" to "- brand" because more specific-string-oriented
+# do not start a keyword with "-" because it is a special character in YAML
+
+# Try to always target the minimum amount of information in your text so to avoid unwanted matches in other text!
+    1. house:
+        - ikea: [ikea, hfb.eco.ikea]
+        - kitchenstudio: [kitchen, kitchen deposit payment, küchen und wohnwelten]
+        - miete: [miete, stiftsweg miete] # Rent
+        - notary: [stelter anwaltssozietaet]
+        - ottoforniture: [otto payments]
+        - suewag # Service provider
+    2. shopping:
+        - amazon: [amazon, amazon prime, amazon.de, amazon.it, amz, amzon, audible, kindle, kindle svcs, www.amazon.it, AMZN Mktp]
+        - apotheke # Pharmacy
+        - barber: [mr.orient]
+        - bauhaus
+        - bergfreunde
+        - bijoubrigitte: [bijou brigitte, bijou.brigitte]
+        - bitpanda
+        - bookshop: [buchhandlung, buchsegler - der kinde, giunti al punto]
