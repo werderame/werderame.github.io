@@ -3,7 +3,7 @@ categories:
     - miete        # Rent
     - suewag       # Utility provider
   shopping:
-    - amazon
+    - amazon: [amazon.com, amz bill]
     - apotheke
     - blume2000
     - candashop
