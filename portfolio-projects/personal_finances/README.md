@@ -11,6 +11,10 @@ How I see my own personal finances, they contain roughly two groups of transacti
 
 This project focuses on the second group. Therefore it is advisable to use this tool on the running expenses, and having cleaned one’s transactions of those lines that correspond to pension schemes, investments, real estate property, etc. The purpose of this tool, in other words, it to tell us how much we are spending per category during a window of time, rather than computing our personal financial overview.
 
+## Tests
+
+By feeding 2000+ lines into this script and adapting the categories accordingly, I've achieved 98% accuracy compared to my personal manual file. With smaller tewaks probably also 99% can be achieved. The point being - this will save me considerable amount of time any time I want to add new lines to the dataset.
+
 ## **Features**
 
 * **Personalised Categorization**: Assigns categories to transactions based on descriptions using a dynamic and configurable YAML file.  
