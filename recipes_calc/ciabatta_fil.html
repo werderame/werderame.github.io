@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multiply Ingredients</title>
+  <style>
+    body { font-family: sans-serif; margin: 2rem; }
+    table { border-collapse: collapse; width: 100%; margin-top: 0.2rem; }
+    th, td { border: 1px solid #ccc; padding: 0.5rem; text-align: left; }
+    td:first-child { width: 70%; }
+    td:last-child { width: 30%; text-align: right;}
+    input { width: 50%; padding: 0.5rem; font-size: 1rem; background-color: #fceeee;}
+    .small { font-size: 0.8rem; color: grey; margin-top: 1rem; margin-bottom: 0;}
+  </style>
+</head>
+<body>
+
+  <h1><i>fil </i>Ciabatta</h1> 
+  <p class="small">Pizza Zutaten <i>calc</i></p>
+  <p></p>
+  <input type="number" id="baseInput" placeholder="Enter the quantity" />
+
+<!-- biga -->
+<p class="small">Biga: </p>
+    <table>
+    <tr>
+        <td>Manitoba</td>
+        <td id="manitobaResult">0</td>
+    </tr>
+    <tr>
+        <td>Wasser</td>
+        <td id="wasser_1Result">0</td>
+    </tr>
+    <tr>
+        <td>Frische Hefe</td>
+        <td id="lievito_1Result">0</td>
+    </tr>
+    </table>
+    <p class="small">Biga: mix veloce degli ingredienti. Importante è incorporare tutta la farina senza incordare. Mettere a riposo una notte in frigo ben chiuso.</p>
+    <br>
+
+  <!-- impasto principale -->
+<p class="small">Mehl: </p>
+    <table>
+    <tr>
+        <td>Weizen 550</td>
+        <td id="w550Result">0</td>
+    </tr>
+    <tr>
+        <td>Weizen VK</td>
+        <td id="wvkResult">0</td>
+    </tr>
+    </table>
+
+    <!-- Acqua, sale e starter -->
+    <p class="small"> Wasser, Salz & Hefe</p>
+    <table>
+        <tr>
+            <td>Wasser</td>
+            <td id="wasser_2Result">0</td>
+        </tr>
+        <tr>
+            <td>Salz</td>
+            <td id="salzResult">0</td>
+        </tr>
+        <tr>
+            <td>Frische Hefe</td>
+            <td id="lievito_2Result">0</td>
+        </tr>
+        <tr>
+          <td>Zucker</td>
+          <td id="zuckerResult">0</td>
+      </tr>
+      <tr>
+        <td>Öl</td>
+        <td id="olResult">0</td>
+    </tr>
+    </table> 
+    <p class="small">Impasto: Autolisi con metà acqua. Impasta a lungo e con molte pause. Aggiungi acqua restante poco alla volta per permettere l'assorbimento (alta idratazione). Da ultimi aggiungi sale e olio.</p>
+    <br>
+    <p class="small">Lievitazione: fare 2-4 giri di pieghe a seconda di quanto la pasta è tenace con pause di ~30'. Lascia lievitare per qualche ora se a temperatura ambiente se abbastanza caldo.</p>
+    <br>
+    <p class="small">Cottura: 250° C (o a palla) ventilato, 10' + 4' con latticini.</p>
+
+
+  <script>
+    const baseInput = document.getElementById('baseInput');
+
+    const manitobaResult = document.getElementById('manitobaResult');
+    const wasser_1Result = document.getElementById('wasser_1Result');
+    const lievito_1Result = document.getElementById('lievito_1Result');
+
+    const w550Result = document.getElementById('w550Result');
+    const wvkResult = document.getElementById('wvkResult');
+    
+    const wasser_2Result = document.getElementById('wasser_2Result');
+    const salzResult = document.getElementById('salzResult');
+    const lievito_2Result = document.getElementById('lievito_2Result');
+    const zuckerResult = document.getElementById('zuckerResult');
+    const olResult = document.getElementById('olResult');
+
+    baseInput.addEventListener('input', function() {
+      const value = parseFloat(baseInput.value);
+
+      if (!isNaN(value)) {
+        manitobaResult.textContent = Math.round(value * 130).toLocaleString();
+        wasser_1Result.textContent = Math.round(value * 58.5).toLocaleString();
+        lievito_1Result.textContent = (value * 1.3).toFixed(1).toLocaleString();
+        w550Result.textContent = Math.round(value * 94).toLocaleString();
+        wvkResult.textContent = Math.round(value * 94).toLocaleString();
+        wasser_2Result.textContent = (value * 216).toLocaleString();
+        salzResult.textContent = (value * 8.2).toFixed(1).toLocaleString();
+        lievito_2Result.textContent = (value * 1.8).toFixed(1).toLocaleString();
+        zuckerResult.textContent = (value * 4).toFixed(1).toLocaleString();
+        olResult.textContent = (value * 18.5).toFixed(1).toLocaleString();
+      } else {
+        manitobaResult.textContent = '0';
+        wasser_1Result.textContent = '0';
+        lievito_1Result.textContent = '0';
+        w550Result.textContent = '0';
+        wvkResult.textContent = '0';
+        wasser_2Result.textContent = '0';
+        salzResult.textContent = '0';
+        lievito_2Result.textContent = '0';
+        zuckerResult.textContent = '0';
+        olResult.textContent = '0';
+      }
+    });
+  </script>
+
+</body>
+</html>
