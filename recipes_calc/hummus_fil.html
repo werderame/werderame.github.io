@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multiply Ingredients</title>
+  <style>
+    body { font-family: sans-serif; margin: 2rem; }
+    table { border-collapse: collapse; width: 100%; margin-top: 0.2rem; }
+    th, td { border: 1px solid #ccc; padding: 0.5rem; text-align: left; }
+    td:first-child { width: 70%; }
+    td:last-child { width: 30%; text-align: right;}
+    input { width: 50%; padding: 0.5rem; font-size: 1rem; background-color: #fceeee;}
+    .small { font-size: 0.8rem; color: grey; margin-top: 1rem; margin-bottom: 0;}
+  </style>
+</head>
+<body>
+
+  <h1><i>fil </i>Hummus</h1> 
+  <p class="small">Zutaten <i>calc</i></p>
+  <p></p>
+  <input type="number" id="baseInput" placeholder="Enter the quantity of wet chickpeas" />
+
+<!-- farina -->
+    <table>
+    <tr>
+        <td>Chickpeas</td>
+        <td id="chickpeasResult">0</td>
+    </tr>
+    <tr>
+        <td>Tahini</td>
+        <td id="tahiniResult">0</td>
+    </tr>
+    <tr>
+        <td>Lemon juice</td>
+        <td id="lemonResult">0</td>
+    </tr>
+    <tr>
+        <td>Cumin</td>
+        <td id="cuminResult">0</td>
+    </tr>
+    <tr>
+      <td>Salt</td>
+      <td id="saltResult">0</td>
+    </tr>
+    <tr>
+      <td>Oil</td>
+      <td id="oilResult">0</td>
+    </tr>
+    <tr>
+      <td>Water</td>
+      <td >q.b.</td>
+  </tr>
+    </table>
+
+    <p class="small">Total: ~ <span id="totalResult">0</span></p>
+
+  <script>
+    const chickpeasResult = document.getElementById('chickpeasResult');
+    const baseInput = document.getElementById('baseInput');
+    const tahiniResult = document.getElementById('tahiniResult');
+    const lemonResult = document.getElementById('lemonResult');
+    const cuminResult = document.getElementById('cuminResult');
+    const saltResult = document.getElementById('saltResult');
+    const oilResult = document.getElementById('oilResult');
+
+    const totalResult = document.getElementById('totalResult');
+
+    baseInput.addEventListener('input', function() {
+      const value = parseFloat(baseInput.value);
+
+      if (!isNaN(value)) {
+        chickpeasResult.textContent = Math.round(value).toLocaleString();
+        tahiniResult.textContent = Math.round(value * 0.2878).toLocaleString();
+        lemonResult.textContent = Math.round(value * 0.1364).toLocaleString();
+        cuminResult.textContent = (value * 0.015).toFixed(1).toLocaleString();
+        saltResult.textContent = (value * 0.01).toFixed(1).toLocaleString();
+        oilResult.textContent = (value * 0.02).toFixed(1).toLocaleString();
+        totalResult.textContent = Math.round(value * 1.4692).toLocaleString();
+      } else {
+        tahiniResult.textContent = '0';
+        lemonResult.textContent = '0';
+        cuminResult.textContent = '0';
+        saltResult.textContent = '0';
+        oilResult.textContent = '0';
+        totalResult.textContent = '0';
+      }
+    });
+  </script>
+
+</body>
+</html>
