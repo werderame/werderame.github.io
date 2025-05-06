@@ -4,47 +4,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Multiply Ingredients</title>
-  <style>
-    body { font-family: sans-serif; margin: 2rem; }
-    table { border-collapse: collapse; width: 100%; margin-top: 0.2rem; }
-    th, td { border: 1px solid #ccc; padding: 0.5rem; text-align: left; }
-    td:first-child { width: 70%; }
-    td:last-child { width: 30%; text-align: right;}
-    input { width: 50%; padding: 0.5rem; font-size: 1rem; background-color: #f0f0f0;}
-    .small { font-size: 0.8rem; color: gray; margin-top: 1rem; margin-bottom: 0;}
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <h1>Förster</h1> 
   <p class="small">Brot Zutaten <i>calc</i></p>
   <p></p>
-  <input type="number" id="baseInput" placeholder="Enter the quantity" />
+  <input class="grey_input" type="number" inputmode="decimal" id="baseInput" placeholder="Enter the bread quantity" />
 
 <!-- farina -->
 <p class="small">Mehl: <span id="totalMehl">0</span></p>
-    <table>
-    <tr>
-        <td>Weizen 550</td>
-        <td id="w550Result">0</td>
-    </tr>
-    <tr>
-        <td>Weizen VK</td>
-        <td id="wvkResult">0</td>
-    </tr>
-    <tr>
-        <td>Roggen VK</td>
-        <td id="rvkResult">0</td>
+    <table class="rounded-table">
+        <tr>
+            <td>Mehl 550</td>
+            <td id="w550Result">0</td>
         </tr>
         <tr>
-        <td>Griessbrei</td>
-        <td id="griessResult">0</td>
+            <td>Mehl VK</td>
+            <td id="wvkResult">0</td>
+        </tr>
+        <tr>
+            <td>Mehl RVK</td>
+            <td id="rvkResult">0</td>
+        </tr>
+        <tr>
+            <td>Mehl Griess</td>
+            <td id="griessResult">0</td>
         </tr>
     </table>
 
     <!-- Acqua, sale e starter -->
     <p class="small"> Wasser, Salz & Sauerteig</p>
-    <table>
+    <table class="rounded-table">
         <tr>
             <td>Wasser</td>
             <td id="wasserResult">0</td>
@@ -78,15 +70,15 @@
       const value = parseFloat(baseInput.value);
 
       if (!isNaN(value)) {
-        w550Result.textContent = (value * 204.6).toLocaleString();
-        wvkResult.textContent = (value * 43.8).toLocaleString();
-        rvkResult.textContent = (value * 43.8).toLocaleString();
-        griessResult.textContent = (value * 40).toLocaleString();
-        wasserResult.textContent = (value * 164).toLocaleString();
-        salzResult.textContent = (value * 8.7).toLocaleString();
-        sauerteigResult.textContent = (value * 87.5).toLocaleString();
-        totalResult.textContent = (value * 592.4).toLocaleString();
-        totalMehl.textContent = (value * 332.2).toLocaleString();
+        w550Result.textContent = Math.round(value * 204.6).toLocaleString();
+        wvkResult.textContent = Math.round(value * 43.8).toLocaleString();
+        rvkResult.textContent = Math.round(value * 43.8).toLocaleString();
+        griessResult.textContent = Math.round(value * 40).toLocaleString();
+        wasserResult.textContent = Math.round(value * 164).toLocaleString();
+        salzResult.textContent = Math.round(value * 8.7).toLocaleString();
+        sauerteigResult.textContent = Math.round(value * 87.5).toLocaleString();
+        totalResult.textContent = Math.round(value * 592.4).toLocaleString();
+        totalMehl.textContent = Math.round(value * 332.2).toLocaleString();
       } else {
         w550Result.textContent = '0';
         wvkResult.textContent = '0';
