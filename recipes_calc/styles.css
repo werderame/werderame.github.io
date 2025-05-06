@@ -1,0 +1,22 @@
+body { font-family: sans-serif; margin: 2rem; }
+table { border-collapse: collapse; width: 100%; margin-top: 0.2rem; }
+
+/*Internal borders*/
+th, td { padding: 0.5rem; text-align: left; border-bottom: 1px solid #ccc; border-right: 1px solid #ccc;}
+
+/*Remove right and bottom borders*/
+tr td:last-child,
+tr th:last-child {border-right: none;}
+table tr:last-child td {border-bottom: none;}
+
+/*Columns width ratio*/
+td:first-child { width: 70%; }
+td:last-child { width: 30%; text-align: right;}
+
+/*Rounded outer borders*/
+.rounded-table {border-collapse: separate; border-radius: 8px; overflow: hidden; border: 1px solid #ccc;}
+
+input { width: 50%; padding: 0.5rem; font-size: 1rem; border-radius: 8px}
+.red_input {background-color: #fceeee;}
+.grey_input {background-color: #f0f0f0;}
+.small { font-size: 0.8rem; color: grey; margin-top: 1rem; margin-bottom: 0;}
