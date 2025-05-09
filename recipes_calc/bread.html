@@ -92,6 +92,9 @@
         totalMehl.textContent = '0';
       }
     });
+
+    // Trigger once on load if there's a value
+    baseInput.dispatchEvent(new Event('input'));
   </script>
 
 </body>

@@ -14,10 +14,9 @@
 <body>
 
   <p>⏲ Timer</p>
+  <input type="number" id="minutesInput" value="5" placeholder="Minutes" inputmode="numeric" /><button onclick="startTimer()">Start</button><button onclick="stopTimer()">Stop</button>
+  <p id="countdownDisplay" class="small">Enter minutes and press Start.       ⚠️ works only with active screen.</p>
 
-  <input type="number" id="minutesInput" value="5" placeholder="Minutes" inputmode="numeric" />
-  <button onclick="startTimer()">Start</button><button onclick="stopTimer()">Stop</button>
-  <p id="countdownDisplay" class="small">Enter minutes and press Start.</p>
 
   <audio id="beep">
     <source src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg" type="audio/ogg">
