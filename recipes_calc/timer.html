@@ -35,15 +35,23 @@
       // If timer is not running
       if (intervalId === null) {
         // Only read input once, on first start
-        if (!hasStarted) {
-          const seconds = parseInt(document.getElementById('minutesInput').value) || 0;
-          if (seconds <= 0) {
-            display.textContent = "Please enter a valid number of minutes.";
-            return;
-          }
-          timeLeft = seconds * 60;  
-          hasStarted = true;
+      if (!hasStarted) {
+        const minutes = parseInt(document.getElementById('minutesInput').value) || 0;
+        if (minutes <= 0) {
+          display.textContent = "Please enter a valid number of minutes.";
+          return;
         }
+        timeLeft = minutes * 60;
+        hasStarted = true;
+
+        // 👇 Unlock audio on Safari/iOS by calling it once on user interaction
+        beep.play().catch(() => { /* ignored on purpose */ });
+
+        // 👇 Optional: vibrate once to signal timer started (on mobile)
+        if (navigator.vibrate) {
+          navigator.vibrate(100);
+        }
+      }
 
         updateDisplay(timeLeft);
 
