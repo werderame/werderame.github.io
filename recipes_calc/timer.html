@@ -14,12 +14,13 @@
 <body>
 
   <p>⏲ Timer</p>
-  <input type="number" id="minutesInput" placeholder="Min" inputmode="numeric" />
+
+  <input type="number" id="minutesInput" value="5" placeholder="Minutes" inputmode="numeric" />
   <button onclick="startTimer()">Start</button><button onclick="stopTimer()">Stop</button>
   <p id="countdownDisplay" class="small">Enter minutes and press Start.</p>
 
   <audio id="beep">
-    <source src="data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAIlYAAESsAAACABAAZGF0YRAAAAAA" type="audio/wav">
+    <source src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg" type="audio/ogg">
   </audio>
 
   <script>
@@ -35,12 +36,12 @@
       if (intervalId === null) {
         // Only read input once, on first start
         if (!hasStarted) {
-          const minutes = parseInt(document.getElementById('minutesInput').value) || 0;
-          if (minutes <= 0) {
+          const seconds = parseInt(document.getElementById('minutesInput').value) || 0;
+          if (seconds <= 0) {
             display.textContent = "Please enter a valid number of minutes.";
             return;
           }
-          timeLeft = minutes * 60;
+          timeLeft = seconds * 60;  
           hasStarted = true;
         }
 
