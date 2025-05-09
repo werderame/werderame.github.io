@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Timer</title>
+  <style>
+    body { text-align: left; }
+    input, button { font-size: 1.2rem; padding: 0.5rem; margin: 0.5rem; width: 100px; }
+    p { font-size: 1.2rem; margin-top: 1rem; }
+  </style>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <p>⏲ Timer</p>
+  <input type="number" id="minutesInput" placeholder="Min" inputmode="numeric" />
+  <button onclick="startTimer()">Start</button><button onclick="stopTimer()">Stop</button>
+  <p id="countdownDisplay" class="small">Enter minutes and press Start.</p>
+
+  <audio id="beep">
+    <source src="data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAIlYAAESsAAACABAAZGF0YRAAAAAA" type="audio/wav">
+  </audio>
+
+  <script>
+    let intervalId = null;
+    let timeLeft = 0;
+    let hasStarted = false;
+
+    function startTimer() {
+      const display = document.getElementById('countdownDisplay');
+      const beep = document.getElementById('beep');
+
+      // If timer is not running
+      if (intervalId === null) {
+        // Only read input once, on first start
+        if (!hasStarted) {
+          const minutes = parseInt(document.getElementById('minutesInput').value) || 0;
+          if (minutes <= 0) {
+            display.textContent = "Please enter a valid number of minutes.";
+            return;
+          }
+          timeLeft = minutes * 60;
+          hasStarted = true;
+        }
+
+        updateDisplay(timeLeft);
+
+        intervalId = setInterval(() => {
+          timeLeft--;
+          if (timeLeft > 0) {
+            updateDisplay(timeLeft);
+          } else {
+            clearInterval(intervalId);
+            intervalId = null;
+            display.textContent = "⏰ Time's up!";
+            beep.play();
+          }
+        }, 1000);
+      }
+    }
+
+    function stopTimer() {
+  if (intervalId !== null) {
+    clearInterval(intervalId);
+    intervalId = null;
+    const mins = Math.floor(timeLeft / 60);
+    const secs = timeLeft % 60;
+    const paddedSecs = secs < 10 ? '0' + secs : secs;
+    document.getElementById('countdownDisplay').textContent = `⏹ Timer paused at ${mins}:${paddedSecs}`;
+  }
+}
+
+    function updateDisplay(secondsLeft) {
+      const mins = Math.floor(secondsLeft / 60);
+      const secs = secondsLeft % 60;
+      const paddedSecs = secs < 10 ? '0' + secs : secs;
+      document.getElementById('countdownDisplay').textContent = `Time left: ${mins}:${paddedSecs}`;
+    }
+  </script>
+
+</body>
+</html>
