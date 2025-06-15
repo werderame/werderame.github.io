@@ -22,6 +22,12 @@ Or read on to see some of my recent works ..
 
    
 ### Selected Projects
+#### 🧩 Inventory Management Modeling and Optimization
+&nbsp;&nbsp;&nbsp;Three allocation models—imperfect FEFO, perfect FEFO, and optimization-based—are compared to reveal the operational and strategic consequences of inventory management operations. Inspired by FMGC delivery serives, this project investigates the real-world cost FEFO adherence (First-Expired-First-Out) through modeling a menu-planning-to-fulfillment data pipeline. The similation adds a linear optimization algorythm, which will shed some light on how even a 3% operational deviation leads to major inefficiencies as well as opportunities.
+    
+&nbsp;&nbsp;&nbsp;There is a lot going on behind the scence. If you would like to dive into the sections of this project, have a read here:&nbsp;&nbsp;&nbsp;[![GitHub Repository](https://img.shields.io/badge/-Repo-181717?style=flat&logo=github&logoColor=white)](https://github.com/werderame/optimizing_inventory_management.git)
+
+
 #### ♻️ FEFO Waste Projection Model (@ HelloFresh)
 &nbsp;&nbsp;&nbsp;Designed a data-driven solution to tackle inventory waste in a complex supply chain environment. Leveraging Python, SQL, and automated ETL pipelines, the project integrates inventory snapshots, demand data, and purchase orders to project waste risks using FEFO principles. Results are visualized through actionable dashboards, empowering stakeholders to make informed decisions, optimize inventory, and reduce costs.    
     
