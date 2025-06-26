@@ -2,3 +2,13 @@
 ---
 
 @import "{{ site.theme }}";
+
+
+/* Hide the sidebar */
+.sidebar { display: none !important; }
+
+/* Expand main content to full width */
+.content {
+  margin-left: 0 !important;
+  width: 100% !important;
+}
