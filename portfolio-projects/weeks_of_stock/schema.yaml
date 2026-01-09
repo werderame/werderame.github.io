@@ -1,1 +1,94 @@
+version: 2
+
+models:
+  - name: rep_scm_stock_depletion_projection
+    description: >
+      Weekly stock depletion projection per (item_id, inventory_channel) using recursive logic.
+      Carries remaining stock forward week-by-week using starting stock, inbound supply, and demand.
+    tests:
+      # Requires dbt-utils. If you don't want that dependency, remove this block.
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns: ["item_id", "inventory_channel", "year_week_number"]
+    columns:
+      - name: item_id
+        description: "Item/SKU identifier."
+        tests: [not_null]
+
+      - name: inventory_channel
+        description: "Inventory channel (e.g., warehouse/channel identifier)."
+        tests: [not_null]
+
+      - name: depletion_order
+        description: "Sequential order of weeks used in the depletion recursion (0 = baseline, 1..N = projected weeks)."
+        tests: [not_null]
+
+      - name: year_week
+        description: "ISO year-week label."
+        tests: [not_null]
+
+      - name: year_week_number
+        description: "ISO year+week as numeric YYYYWW."
+        tests: [not_null]
+
+      - name: week_sequential_number
+        description: "Monotonic sequential week index (used for week-to-week arithmetic)."
+        tests: [not_null]
+
+      - name: item_demand
+        description: "Weekly demand quantity used for depletion."
+        tests: [not_null]
+
+      - name: incoming_quantity
+        description: "Weekly inbound quantity used for depletion."
+        tests: [not_null]
+
+      - name: remaining_stock
+        description: "Remaining stock floored at zero (stakeholder-facing series)."
+        tests: [not_null]
+
+      - name: remaining_stock_negatives
+        description: "Remaining stock allowing negatives (diagnostic series)."
+        tests: [not_null]
+
+      - name: depletion_week_numeric
+        description: "YYYYWW of the first week where remaining_stock reaches 0 (null if never depletes within horizon)."
+
+      - name: depletion_week_sequential_number
+        description: "Sequential week number of the depletion week (used to compute weeks-of-stock)."
+
+      - name: demand_week_sequential_number
+        description: "Sequential week number of the current demand week."
+
+      - name: planning_category
+        description: "Optional item categorization used for reporting/segmentation."
+
+  - name: rep_scm_weeks_of_stock_kpi
+    description: >
+      Weeks-of-Stock KPI derived from the stock depletion projection, plus simple demand averages
+      to support prioritization for items with short coverage.
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns: ["item_id", "inventory_channel", "start_seq"]
+    columns:
+      - name: item_id
+        description: "Item/SKU identifier."
+        tests: [not_null]
+
+      - name: inventory_channel
+        description: "Inventory channel (e.g., warehouse/channel identifier)."
+        tests: [not_null]
+
+      - name: start_seq
+        description: "Baseline sequential week used as reference for weeks-of-stock."
+        tests: [not_null]
+
+      - name: weeks_of_stock
+        description: "Weeks between baseline week and projected depletion week."
+        tests: [not_null]
+
+      - name: avg_demand_6w_def_1
+        description: "Average weekly demand over the next ~6 weeks (definition aligned to baseline handling)."
+
+      - name: avg_demand_4w_def_2
+        description: "Average weekly demand over the previous 4 weeks."
 
