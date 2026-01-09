@@ -30,14 +30,12 @@ Or read on to see some of my recent works ..
 
    
 ### Selected Projects
-#### Stock depletion projection (@ Enpal)
+#### 🪃 Stock depletion projection (@ Enpal)
 
-In supply chain, a deceptively simple question drives a lot of daily decisions: *when will we run out, and where?*  
-This project is a compact example of the kind of analytics engineering work I enjoy most: taking messy operational inputs (current stock, inbound supply, demand) and turning them into a reliable, decision-facing metric.
+In supply chain, a deceptively simple question drives daily decisions: when will we run out, and where? This project turns stock, inbound supply, and demand into a decision-ready forecast by building a dbt-style model chain that outputs a weekly stock trajectory per SKU/channel and a consistent Weeks-of-Stock KPI. At its core is a recursive SQL depletion step that rolls remaining stock forward week by week—making the result both auditable and directly actionable.
 
-I built a dbt-style model chain that produces a weekly stock trajectory per SKU and channel, and derives a consistent **Weeks-of-Stock** KPI. The core of the work is a recursive depletion step in SQL: remaining stock is carried forward week by week, adding incoming quantities and subtracting demand, until depletion. The result is both explainable (auditable week-by-week) and useful (actionable depletion horizon).
-
-You can read the short technical deep dive here:&nbsp;&nbsp;&nbsp;[![GitHub Repository](https://img.shields.io/badge/-Repo-181717?style=flat&logo=github&logoColor=white)](https://github.com/werderame/werderame.github.io/tree/main/portfolio-projects/weeks_of_stock) and jump straight to the flagship model here: `./portfolio-projects/weeks_of_stock/rep_scm_stock_depletion_projection.sql`.
+Read the short technical deep dive here, and jump straight to the flagship model:&nbsp;&nbsp;&nbsp;[![GitHub Repository](https://img.shields.io/badge/-Repo-181717?style=flat&logo=github&logoColor=white)](https://github.com/werderame/werderame.github.io/tree/main/portfolio-projects/weeks_of_stock)
+[![SQL](https://img.shields.io/badge/SQL-003B57?style=flat&logo=microsoftsqlserver&logoColor=white)](https://github.com/werderame/werderame.github.io/tree/main/portfolio-projects/weeks_of_stock//rep_scm_stock_depletion_projection.sql)
 
 
 #### 🧩 Inventory Management Modeling and Optimization
