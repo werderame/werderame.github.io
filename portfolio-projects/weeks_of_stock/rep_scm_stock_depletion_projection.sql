@@ -4,6 +4,8 @@
         )
 }}
 
+-- Sanitized portfolio example: stock depletion projection using recursive SQL (dbt-style).
+
 WITH
 -- stock layer.
 int_scm_stock_for_weeks_of_stock_calculation AS (
@@ -15,8 +17,10 @@ int_scm_stock_for_weeks_of_stock_calculation AS (
 , dim_date AS (
   SELECT DISTINCT
     yyyyww_iso
-    , week_sequential_number -- sequential are used for calculating time distances
+    , week_sequential_number
+    , the_day_of_week
   FROM {{ ref('dim_date') }}
+  WHERE the_day_of_week = 1 -- filter only one day of the week
 )
 
 -- calculation layer
@@ -39,23 +43,23 @@ int_scm_stock_for_weeks_of_stock_calculation AS (
     demand.item_id
     , demand.inventory_channel
     , 0 AS depletion_order
-    , LEFT(stock.current_yearweek_iso, 4) || '_CW' || RIGHT(stock.current_yearweek_iso, 2) AS year_week
-    , stock.current_yearweek_iso AS year_week_number
-    , NULL AS item_demand
+    , demand.year_week AS year_week
+    , demand.year_week_number AS year_week_number
+    , demand.week_sequential_number AS week_sequential_number
+    , 0 AS item_demand
     , COALESCE(stock.stock_quantity, 0) AS remaining_stock
+    , COALESCE(stock.stock_quantity, 0) AS remaining_stock_negatives
+    , 0 AS incoming_quantity
   FROM ordered_demand AS demand
-
-    LEFT JOIN int_scm_stock_for_weeks_of_stock_calculation AS stock
-      ON
-        demand.item_id = stock.item_id
-        AND demand.inventory_channel = stock.inventory_channel
-  WHERE demand.depletion_order = 1 -- only select the first iteration of the key (item and inventory channel)
-
+  LEFT JOIN int_scm_stock_for_weeks_of_stock_calculation AS stock
+    ON demand.item_id = stock.item_id
+    AND demand.inventory_channel = stock.inventory_channel
+  WHERE demand.depletion_order = 1
 )
 
 -- 2. display recursive stock depletion
 -- recursion: remaining = prev_remaining + incoming - demand
--- get the stock, deplete the demannd, calculate the remaining stock, thus use this as the stock for the next week
+-- get the stock, deplete the demand, calculate the remaining stock, thus use this as the stock for the next week
 , recursive_stock AS ( -- anchor
   SELECT
     demand.item_id
@@ -65,19 +69,18 @@ int_scm_stock_for_weeks_of_stock_calculation AS (
     , demand.year_week_number
     , demand.week_sequential_number
     , demand.item_demand
-    , COALESCE(stock.stock_quantity, 0) + demand.incoming_quantity - demand.item_demand AS remaining_stock -- calculate the remaining stock
+    , COALESCE(stock.stock_quantity, 0) + demand.incoming_quantity - demand.item_demand AS remaining_stock
+    , COALESCE(stock.stock_quantity, 0) + demand.incoming_quantity - demand.item_demand AS remaining_stock_negatives
+    , demand.incoming_quantity
   FROM ordered_demand AS demand
-
-    INNER JOIN int_scm_stock_for_weeks_of_stock_calculation AS stock
-      ON
-        demand.item_id = stock.item_id -- stock and demand per article
-        AND demand.inventory_channel = stock.inventory_channel
-
-  WHERE demand.depletion_order = 1 -- join on week 1
+  LEFT JOIN int_scm_stock_for_weeks_of_stock_calculation AS stock
+    ON demand.item_id = stock.item_id
+    AND demand.inventory_channel = stock.inventory_channel
+  WHERE demand.depletion_order = 1
 
   UNION ALL
 
-  SELECT -- recursive step: go to next row
+  SELECT
     demand.item_id
     , demand.inventory_channel
     , demand.depletion_order
@@ -85,68 +88,64 @@ int_scm_stock_for_weeks_of_stock_calculation AS (
     , demand.year_week_number
     , demand.week_sequential_number
     , demand.item_demand
-    , recur.remaining_stock + demand.incoming_quantity - demand.item_demand AS remaining_stock
-  FROM recursive_stock AS recur
-
-    INNER JOIN ordered_demand AS demand
-      ON
-        demand.item_id = recur.item_id -- join on the item
-        AND demand.inventory_channel = recur.inventory_channel -- and on the distribution center
-        AND demand.depletion_order = recur.depletion_order + 1 -- on the next row
+    , GREATEST(prev.remaining_stock + demand.incoming_quantity - demand.item_demand, 0) AS remaining_stock
+    , prev.remaining_stock_negatives + demand.incoming_quantity - demand.item_demand AS remaining_stock_negatives
+    , demand.incoming_quantity
+  FROM ordered_demand AS demand
+  INNER JOIN recursive_stock AS prev
+    ON demand.item_id = prev.item_id
+    AND demand.inventory_channel = prev.inventory_channel
+    AND demand.depletion_order = prev.depletion_order + 1
 )
 
-, clean_zero_stock AS ( -- output the clean version of the stock projection
-  SELECT
-    item_id
-    , inventory_channel
-    , depletion_order
-    , year_week
-    , year_week_number
-    , item_demand
-    , remaining_stock AS remaining_stock_negatives -- renaming to explicate that this stock allows negative numbers
-    , IFF(remaining_stock < 0, 0, remaining_stock) AS remaining_stock
-  FROM recursive_stock
-
+-- 3. union baseline + recursion
+, stock_depletion_union AS (
+  SELECT * FROM initial_stock
   UNION ALL
+  SELECT * FROM recursive_stock
+)
 
-  -- baseline rows at depletion_order = 0 (previous week of first demand)
+-- 4. identify depletion week: first week where remaining hits 0 (or the last positive week)
+, depletion_week AS (
   SELECT
     item_id
     , inventory_channel
-    , depletion_order
-    , year_week
-    , year_week_number
-    , item_demand
-    , remaining_stock AS remaining_stock_negatives
-    , IFF(remaining_stock < 0, 0, remaining_stock) AS remaining_stock
-  FROM initial_stock
-
+    , MIN(year_week_number) AS depletion_week_numeric
+  FROM (
+    SELECT
+      item_id
+      , inventory_channel
+      , year_week_number
+      , remaining_stock
+      , LAG(remaining_stock) OVER (
+          PARTITION BY item_id, inventory_channel
+          ORDER BY year_week_number
+        ) AS remaining_stock_prev
+    FROM stock_depletion_union
+    WHERE depletion_order > 0
+  ) s
+  WHERE remaining_stock = 0 AND COALESCE(remaining_stock_prev, 1) > 0
+  GROUP BY item_id, inventory_channel
 )
 
--- 3. calculate depletion week,
-, depletion_week AS ( -- calculate the depletion week
+-- final presentation layer
+, final AS (
   SELECT
-    item_id
-    , inventory_channel
-    , MAX(year_week) AS depletion_week
-    , MAX(year_week_number) AS depletion_week_numeric
-  FROM clean_zero_stock
-
-  WHERE remaining_stock > 0 -- get the latest row per item with some remaining stock
-
-  GROUP BY ALL
-)
-
--- 4. calculate weeks of stock
-, final AS ( -- join together the stock depletion data and calculate the weeks of stock
-  SELECT
-    stock.*
+    stock.item_id
+    , stock.inventory_channel
+    , stock.depletion_order
+    , stock.year_week
+    , stock.year_week_number
+    , stock.week_sequential_number
+    , stock.item_demand
+    , stock.incoming_quantity
+    , stock.remaining_stock
+    , stock.remaining_stock_negatives
+    , depletion.depletion_week_numeric
+    , cal_depletion.week_sequential_number AS depletion_week_sequential_number
+    , cal_demand.week_sequential_number AS demand_week_sequential_number
     , item_data.planning_category
-    , depletion.depletion_week
-    , cal_depletion.week_sequential_number - cal_demand.week_sequential_number AS weeks_of_stock_negatives
-    , GREATEST(cal_depletion.week_sequential_number - cal_demand.week_sequential_number, 0) AS weeks_of_stock
-  FROM clean_zero_stock AS stock
-
+  FROM stock_depletion_union AS stock
     LEFT JOIN depletion_week AS depletion
       ON
         stock.item_id = depletion.item_id
@@ -159,5 +158,5 @@ int_scm_stock_for_weeks_of_stock_calculation AS (
       ON stock.item_id = item_data.item_id
 )
 
--- work around the sqlfluff issue
-SELECT * FROM final -- noqa: disable=Enpal_L002
+-- work around sqlfluff / linting parsing edge-cases
+SELECT * FROM final -- noqa
