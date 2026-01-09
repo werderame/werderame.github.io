@@ -30,6 +30,16 @@ Or read on to see some of my recent works ..
 
    
 ### Selected Projects
+#### Stock depletion projection (@ Enpal)
+
+In supply chain, a deceptively simple question drives a lot of daily decisions: *when will we run out, and where?*  
+This project is a compact example of the kind of analytics engineering work I enjoy most: taking messy operational inputs (current stock, inbound supply, demand) and turning them into a reliable, decision-facing metric.
+
+I built a dbt-style model chain that produces a weekly stock trajectory per SKU and channel, and derives a consistent **Weeks-of-Stock** KPI. The core of the work is a recursive depletion step in SQL: remaining stock is carried forward week by week, adding incoming quantities and subtracting demand, until depletion. The result is both explainable (auditable week-by-week) and useful (actionable depletion horizon).
+
+You can read the short technical deep dive here:&nbsp;&nbsp;&nbsp;[![GitHub Repository](https://img.shields.io/badge/-Repo-181717?style=flat&logo=github&logoColor=white)](https://github.com/werderame/werderame.github.io/tree/main/portfolio-projects/weeks_of_stock) and jump straight to the flagship model here: `./portfolio-projects/weeks_of_stock/rep_scm_stock_depletion_projection.sql`.
+
+
 #### 🧩 Inventory Management Modeling and Optimization
 &nbsp;&nbsp;&nbsp;Three allocation models—imperfect FEFO, perfect FEFO, and optimization-based—are compared to reveal the operational and strategic consequences of inventory management operations. Inspired by FMGC delivery serives, this project investigates the real-world cost of FEFO adherence (First-Expired-First-Out) through modeling a menu-planning-to-fulfillment data pipeline. The similation adds a linear optimization algorythm, which will shed some light on how even a 3% operational deviation leads to major inefficiencies as well as opportunities.
     
