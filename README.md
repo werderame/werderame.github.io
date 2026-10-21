@@ -31,10 +31,10 @@ Outside of work, I enjoy bouldering, baking bread and making things in wood. You
 
 
 ### 🤝 What I’m Looking For
-I’m looking for a role where data is close to decisions and operations — where analytics means enablement function that strengthens the business and eventually improves the product. Longer term, I’d love to move deeper into operations research / optimization (planning, capacity or scheduling) and help build systems that make companies more efficient and resilient. Right now, I’m focused on growing my experience in analytics and engineering, and contributing as a strong, reliable teammate who delivers.
 
-I look forward to chatting with you -feel free to get in touch.  
-Or read on to see some of my recent works ..  
+I’m looking for a hands-on role in analytics engineering or data analysis, where I can help define the problem and own the work from design to delivery. I’m at my best when there’s something new to build, a process to rethink or a difficult question to investigate.
+
+I’m open to new industries—learning how they work is part of what I enjoy. I value autonomy, flexible working and close collaboration with the people using what I build. I want to make room for both careful technical work and the conversations that give it purpose. 
   
 &nbsp;&nbsp;&nbsp;[![LinkedIn](https://img.shields.io/badge/_/-Filippo-0c66c3?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/filippo-carraro/?locale=en_US) [![GitHub](https://img.shields.io/badge/_/-Filippo-181717?style=flat&logo=github&logoColor=white)](https://github.com/werderame)
 
