@@ -30,12 +30,12 @@ Or read on to see some of my recent works ..
 
    
 ### Selected Projects
-#### 🪃 Stock depletion projection (@ Enpal)
+#### 🪃 Weeks of Stock and Dynamic Demand Average
 
-In supply chain, a deceptively simple question drives daily decisions: when will we run out, and where? This project turns stock, inbound supply, and demand into a decision-ready forecast by building a dbt-style model chain that outputs a weekly stock trajectory per SKU/channel and a consistent Weeks-of-Stock KPI. At its core is a recursive SQL depletion step that rolls remaining stock forward week by week—making the result both auditable and directly actionable.
+How many weeks of demand does our stock represent when demand changes over time? At Enpal, I built a dbt pipeline combining inventory, incoming purchases and planned demand, then projecting stock recursively, week by week. The resulting stock horizon determines whether the KPI uses a six-week average or a shorter dynamic demand window. The challenge was defining a useful coverage measure while keeping it separate from forecast consumption. This portfolio version preserves my SQL logic and uses synthetic data, worked examples, visuals and tests to make the calculation easy to follow.
 
-Read the short technical deep dive here, and jump straight to the flagship model:&nbsp;&nbsp;&nbsp;[![GitHub Repository](https://img.shields.io/badge/-Repo-181717?style=flat&logo=github&logoColor=white)](https://github.com/werderame/werderame.github.io/tree/main/portfolio-projects/weeks_of_stock)
-[![SQL](https://img.shields.io/badge/SQL-003B57?style=flat&logo=microsoftsqlserver&logoColor=white)](https://github.com/werderame/werderame.github.io/tree/main/portfolio-projects/weeks_of_stock//rep_scm_stock_depletion_projection.sql)
+
+You can enter this project via the README stakeholder summary or you can jump to the DWH architecture of the data pipeline &nbsp;&nbsp;&nbsp;[![Download PDF](https://img.shields.io/badge/pdf-FF0000?style=flat&logo=adobeacrobatreader&logoColor=white)](https://werderame.github.io/assets/img/readme_weeks_of_stock_dbt.pdf)&nbsp;&nbsp;&nbsp;[![GitHub Repository](https://img.shields.io/badge/-Repo-181717?style=flat&logo=github&logoColor=white)](https://github.com/werderame/weeks-of-stock-dbt.git)
 
 
 #### 🧩 Inventory Management Modeling and Optimization
