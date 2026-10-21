@@ -57,7 +57,26 @@ You can enter this project via the README stakeholder summary or you can jump to
 [![GitHub Repository](https://img.shields.io/badge/-Repo-181717?style=flat&logo=github&logoColor=white)](https://github.com/werderame/werderame.github.io/tree/main/portfolio-projects/packaging_licencing_fee)
     
 #### 🏷️💰 Personal Fianances
-&nbsp;&nbsp;&nbsp;Track your expenses with this tool designed to automate the categorization of bank transactions. Inspired by Jer Bouma's repository, it combines advanced text processing and Levenshtein-based methods for accurate, flexible, and easy-to-review financial categorization. Feel free to use it or get in touch if you have more ideas! [![GitHub Repository](https://img.shields.io/badge/-Repo-181717?style=flat&logo=github&logoColor=white)](https://github.com/werderame/werderame.github.io/tree/main/portfolio-projects/personal_finances)    
+&nbsp;&nbsp;&nbsp;Track your expenses with this tool designed to automate the categorization of bank transactions. Inspired by Jer Bouma's repository, it combines advanced text processing and Levenshtein-based methods for accurate, flexible, and easy-to-review financial categorization. Feel free to use it or get in touch if you have more ideas! [![GitHub Repository](https://img.shields.io/badge/-Repo-181717?style=flat&logo=github&logoColor=white)](https://github.com/werderame/werderame.github.io/tree/main/portfolio-projects/personal_finances)   
+
+
+
+## Outside of Data
+<div style="display: flex; width: 100%; height: 1px;"><div style="flex: 1; background-color: #0f2276;"></div><div style="flex: 1; background-color: #1a958b;"></div><div style="flex: 1; background-color: #1b910a;"></div><div style="flex: 1; background-color: #fa5208;"></div><div style="flex: 1; background-color: #fa0814;"></div><div style="flex: 1; background-color: #9307de;"></div><div style="flex: 1; background-color: #23910a;"></div><div style="flex: 1; background-color: #2b1cf2;"></div></div>    
+
+
+### 🪵 Working with wood
+
+I also love working with wood. Through Filo Holz, I make cutting boards, boxes and other small wooden objects in my Berlin workshop.
+
+During my recent career break, I’ve given this project more space: making pieces, taking part in a local market and now beginning client work.
+
+<p>
+  <a href="https://www.instagram.com/reel/Der7A1-i0uk/"><img src="/assets/img/woodworking/walnut-board-video.jpg" alt="Walnut end-grain cutting board. Click to watch the video on Instagram." height="240" /></a>
+  <a href="https://www.instagram.com/p/DecMlHHCv2y/"><img src="/assets/img/woodworking/walnut-grain.jpg" alt="Close-up of the walnut end-grain pattern in a handmade cutting board." height="240" /></a>
+</p>
+
+[See the board up close](https://www.instagram.com/p/DecMlHHCv2y/) · [Watch the short video](https://www.instagram.com/reel/Der7A1-i0uk/)
 
 
 <div style="display: flex; width: 100%; height: 2px;"><div style="flex: 1; background-color: #0f2276;"></div><div style="flex: 1; background-color: #1a958b;"></div><div style="flex: 1; background-color: #1b910a;"></div><div style="flex: 1; background-color: #fa5208;"></div><div style="flex: 1; background-color: #fa0814;"></div><div style="flex: 1; background-color: #9307de;"></div><div style="flex: 1; background-color: #23910a;"></div><div style="flex: 1; background-color: #2b1cf2;"></div></div>
