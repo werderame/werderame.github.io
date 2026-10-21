@@ -52,7 +52,7 @@ You can enter this project via the README stakeholder summary or you can jump to
 
 
 #### 🧩 Inventory Management Modeling and Optimization
-&nbsp;&nbsp;&nbsp;Three allocation models—imperfect FEFO, perfect FEFO, and optimization-based—are compared to reveal the operational and strategic consequences of inventory management operations. Inspired by FMGC delivery serives, this project investigates the real-world cost of FEFO adherence (First-Expired-First-Out) through modeling a menu-planning-to-fulfillment data pipeline. The similation adds a linear optimization algorythm, which will shed some light on how even a 3% operational deviation leads to major inefficiencies as well as opportunities.
+&nbsp;&nbsp;&nbsp;Three allocation models—imperfect FEFO, perfect FEFO, and optimization-based—are compared to reveal the operational and strategic consequences of inventory management operations. Inspired by FMCG delivery services, this project investigates the real-world cost of FEFO adherence (First-Expired-First-Out) through modeling a menu-planning-to-fulfillment data pipeline. The simulation adds a linear optimization algorithm, which will shed some light on how even a 3% operational deviation leads to major inefficiencies as well as opportunities.
     
 &nbsp;&nbsp;&nbsp;There is a lot going on behind the scenes. If you would like to dive into the sections of this project, have a read here:&nbsp;&nbsp;&nbsp;[![GitHub Repository](https://img.shields.io/badge/-Repo-181717?style=flat&logo=github&logoColor=white)](https://github.com/werderame/optimizing_inventory_management.git)
 
@@ -69,7 +69,7 @@ You can enter this project via the README stakeholder summary or you can jump to
 &nbsp;&nbsp;&nbsp;Lots more nerdy information over here..&nbsp;&nbsp;&nbsp;[![Download PDF](https://img.shields.io/badge/-pdf-FF0000?style=flat&logo=adobeacrobatreader&logoColor=white)](https://werderame.github.io/assets/img/readme_file_packaging_fee_github.pdf)
 [![GitHub Repository](https://img.shields.io/badge/-Repo-181717?style=flat&logo=github&logoColor=white)](https://github.com/werderame/werderame.github.io/tree/main/portfolio-projects/packaging_licencing_fee)
     
-#### 🏷️💰 Personal Fianances
+#### 🏷️💰 Personal Finances
 &nbsp;&nbsp;&nbsp;Track your expenses with this tool designed to automate the categorization of bank transactions. Inspired by Jer Bouma's repository, it combines advanced text processing and Levenshtein-based methods for accurate, flexible, and easy-to-review financial categorization. Feel free to use it or get in touch if you have more ideas! [![GitHub Repository](https://img.shields.io/badge/-Repo-181717?style=flat&logo=github&logoColor=white)](https://github.com/werderame/werderame.github.io/tree/main/portfolio-projects/personal_finances)   
 
 

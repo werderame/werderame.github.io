@@ -11,4 +11,17 @@
 .content {
   margin-left: 0 !important;
   width: 100% !important;
+
+
+/* Widen the page and text column on desktop */
+@media screen and (min-width: 961px) {
+  .wrapper {
+    width: 1080px;
+    max-width: 100%;
+  }
+
+  section {
+    width: calc(100% - 340px);
+  }
+}
 }
