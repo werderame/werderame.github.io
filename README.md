@@ -1,21 +1,34 @@
 ## Hi, I’m Filippo 👋
-Welcome to my GitHub! I’m driven by one question: **what’s really happening underneath the surface**? I studied philosophy, then moved into supply chain, and eventually went deep into data because it’s the most practical way I know to turn messy reality into decisions, systems, and products.
-I enjoy the technical craft — modeling data, writing clean code, designing pipelines — but I’m just as interested in the operating context: how teams make decisions, where processes break, and how a technical solution can genuinely make life easier for the people running the business.
+I’m a Senior Analytics Engineer and Data Analyst with a generalist mindset. I learn new subjects quickly and enjoy figuring out how unfamiliar businesses work. I studied philosophy, worked with ERP systems and logistics, and moved into analytics because I like investigating problems and building practical solutions.
+
+My strongest work often starts with something that hasn’t been designed yet: understanding the problem, finding the right approach and building it from the ground up.
 
 ### 🌱 A Bit About Me
-I’m at my best when I can bring structure to ambiguity and ship something that people can rely on: a clear metric definition, a repeatable dataset, an automated report, or an analysis that directly changes how a team operates.
-My current toolkit includes Python and SQL for analysis and automation, dbt for transformation and modeling, and BI tools for delivery and stakeholder alignment. I’ve worked with modern warehouse/lakehouse setups and I’m especially interested in the intersection between analytics and operations. Recent work includes supporting the SCM and Finance domains in Enpal (Greentech unicorn) with operational data pipelines, focusing on **inventory reconciliation** and **PnL**.
+I usually start by talking to the people doing the work. How does the process actually run? What are they trying to decide, and what would make that decision easier? Those conversations shape the data model, its level of detail and the rules behind the calculation.
 
+Recent projects have taken me into energy metering, inventory planning and component cost reconciliation. I enjoy getting deep enough into a subject to challenge assumptions, make the logic explicit and explain the result clearly to someone who doesn’t write SQL.
+
+Outside of work, I enjoy bouldering, baking bread and making things in wood. You’ll find some of my woodworking further down this page.
+
+### 🛠️ Skills and Tools
 &nbsp;&nbsp;&nbsp;![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 ![GLPK](https://img.shields.io/badge/GLPK-555555?style=flat&logo=gnu&logoColor=white)
 ![SQL](https://img.shields.io/badge/SQL-003B57?style=flat&logo=microsoftsqlserver&logoColor=white)
 ![dbt](https://img.shields.io/badge/dbt-FF694B?style=flat&logo=dbt&logoColor=white)
 ![Databricks](https://img.shields.io/badge/Databricks-FF3621?style=flat&logo=databricks&logoColor=white)
 ![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=flat&logo=powerbi&logoColor=black)
-<!--![Snowflake](https://img.shields.io/badge/Snowflake-29B5E8?style=flat&logo=snowflake&logoColor=white)-->
-<!--&nbsp;&nbsp;&nbsp;&nbsp;![Tableau](https://img.shields.io/badge/Tableau-E97627?style=flat&logo=tableau&logoColor=white) -->
+![Snowflake](https://img.shields.io/badge/Snowflake-29B5E8?style=flat&logo=snowflake&logoColor=white)
+![Tableau](https://img.shields.io/badge/Tableau-E97627?style=flat&logo=tableau&logoColor=white)
+- **Data analysis:** exploratory and diagnostic analysis, KPI definition, variance analysis and reconciliation across sources.
+- **Quantitative modelling:** inventory and demand projections, time-series logic, scenario simulation and comparison of operational policies.
+- **Optimisation:** linear programming with GLPK, modelling constraints and objectives, and inventory allocation.
+- **SQL and analytics engineering:** recursive queries, dimensional modelling, temporal validity logic and reusable transformations.
+- **dbt:** layered model design, source definitions, YAML documentation, composite-grain tests and business-rule validation.
+- **Python:** data pipelines, automation, analytical workflows and simulation.
+- **Platforms and visualisation:** Snowflake, Databricks, Tableau and Power BI.
+- **Business process design:** understanding requirements, formalising operational rules and explaining calculations and trade-offs to stakeholders.
+- **AI-assisted development:** challenging designs, generating code and validating outputs through manual review and representative data.
 
-Outside of work, I climb — bouldering since moving to Berlin — and I’m into bread baking and woodworking. They’re a good reminder that progress comes from repetition, patience, and getting the fundamentals right.
 
 ### 🤝 What I’m Looking For
 I’m looking for a role where data is close to decisions and operations — where analytics means enablement function that strengthens the business and eventually improves the product. Longer term, I’d love to move deeper into operations research / optimization (planning, capacity or scheduling) and help build systems that make companies more efficient and resilient. Right now, I’m focused on growing my experience in analytics and engineering, and contributing as a strong, reliable teammate who delivers.
@@ -30,7 +43,7 @@ Or read on to see some of my recent works ..
 
    
 ### Selected Projects
-#### 🪃 Weeks of Stock and Dynamic Demand Average
+#### 🪃 Weeks of Stock and Dynamic Demand Average (@ Enpal)
 
 How many weeks of demand does our stock represent when demand changes over time? At Enpal, I built a dbt pipeline combining inventory, incoming purchases and planned demand, then projecting stock recursively, week by week. The resulting stock horizon determines whether the KPI uses a six-week average or a shorter dynamic demand window. The challenge was defining a useful coverage measure while keeping it separate from forecast consumption. This portfolio version preserves my SQL logic and uses synthetic data, worked examples, visuals and tests to make the calculation easy to follow.
 
