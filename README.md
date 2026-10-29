@@ -43,6 +43,14 @@ I’m open to new industries—learning how they work is part of what I enjoy. I
 
    
 ### Selected Projects
+#### 🧮 Component Cost Reconciliation (@ Enpal)
+
+What should an order consume, and what did the warehouse actually deliver? At Enpal, I built a dbt pipeline connecting sales, bills of materials, warehouse movements and costs to explain component cost differences. This portfolio version preserves my calculation logic, with synthetic data, worked examples and tests.
+
+
+Have a read to the summary or jump into the repository &nbsp;&nbsp;&nbsp;[![Download PDF](https://img.shields.io/badge/pdf-FF0000?style=flat&logo=adobeacrobatreader&logoColor=white)](https://werderame.github.io/assets/img/readme_file_pnl_reconciliation_github.pdf)&nbsp;&nbsp;&nbsp;[![GitHub Repository](https://img.shields.io/badge/-Repo-181717?style=flat&logo=github&logoColor=white)](https://github.com/werderame/pnl-reconciliation-dbt.git)
+
+
 #### 🪃 Weeks of Stock and Dynamic Demand Average (@ Enpal)
 
 How many weeks of demand does our stock represent when demand changes over time? At Enpal, I built a dbt pipeline combining inventory, incoming purchases and planned demand, then projecting stock recursively, week by week. The resulting stock horizon determines whether the KPI uses a six-week average or a shorter dynamic demand window. The challenge was defining a useful coverage measure while keeping it separate from forecast consumption. This portfolio version preserves my SQL logic and uses synthetic data, worked examples, visuals and tests to make the calculation easy to follow.
